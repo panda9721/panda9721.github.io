@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mega Maker | Panda</title>
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0d10;
+            color: #f2f2f2;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img,
+        video {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgba(11, 13, 16, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #22262d;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .back-link {
+            color: #a7adb7;
+            font-size: 14px;
+        }
+
+            .back-link:hover {
+                color: #ffffff;
+            }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            max-width: 1100px;
+            min-height: 75vh;
+            margin: 0 auto;
+            padding: 120px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .eyebrow {
+            color: #7f8793;
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(60px, 10vw, 110px);
+            line-height: 0.95;
+            letter-spacing: -5px;
+            margin-bottom: 30px;
+        }
+
+        .hero-description {
+            max-width: 700px;
+            color: #a7adb7;
+            font-size: 20px;
+        }
+
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 100px 30px;
+            border-top: 1px solid #22262d;
+        }
+
+        .section-label {
+            color: #7f8793;
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        section h2 {
+            font-size: clamp(40px, 6vw, 70px);
+            line-height: 1.1;
+            letter-spacing: -2px;
+            margin-bottom: 40px;
+        }
+
+        section p {
+            color: #a7adb7;
+        }
+
+
+        /* =========================
+           PROJECT INFO
+        ========================= */
+
+        .project-info {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+        }
+
+        .project-description p {
+            max-width: 700px;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .project-details {
+            border-left: 1px solid #303640;
+            padding-left: 30px;
+        }
+
+        .detail {
+            margin-bottom: 25px;
+        }
+
+        .detail-title {
+            color: #7f8793;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .detail-value {
+            color: #f2f2f2;
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           DESIGN IMAGE
+        ========================= */
+
+        .design-image {
+            margin-top: 50px;
+            border: 1px solid #292e36;
+            overflow: hidden;
+        }
+
+            .design-image img {
+                width: 100%;
+                height: auto;
+            }
+
+        .caption {
+            padding: 15px 20px;
+            border-top: 1px solid #292e36;
+            color: #7f8793;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           LEVEL SHOWCASE
+        ========================= */
+
+        .levels {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .level-card {
+            border: 1px solid #292e36;
+            overflow: hidden;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+            .level-card:hover {
+                transform: translateY(-5px);
+                border-color: #6f7782;
+            }
+
+        .level-video {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            background: #050608;
+        }
+
+        .level-content {
+            padding: 25px;
+        }
+
+        .level-number {
+            color: #666d77;
+            font-size: 12px;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .level-content h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .level-content p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .difficulty {
+            display: inline-block;
+            padding: 5px 9px;
+            border: 1px solid #303640;
+            color: #a7adb7;
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           DESIGN PROCESS
+        ========================= */
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .process-card {
+            padding: 30px;
+            border: 1px solid #292e36;
+        }
+
+        .process-number {
+            color: #666d77;
+            font-size: 13px;
+            margin-bottom: 30px;
+        }
+
+        .process-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .process-card p {
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           TAKEAWAYS
+        ========================= */
+
+        .takeaways {
+            max-width: 750px;
+        }
+
+            .takeaways p {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 13px 22px;
+            background: #ffffff;
+            color: #0b0d10;
+            font-weight: 600;
+            border: 1px solid #ffffff;
+            transition: all 0.2s ease;
+        }
+
+            .button:hover {
+                background: transparent;
+                color: #ffffff;
+            }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 30px;
+            border-top: 1px solid #22262d;
+        }
+
+            footer p {
+                color: #666d77;
+                font-size: 13px;
+            }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 18px 20px;
+            }
+
+            .hero {
+                padding: 80px 20px;
+            }
+
+            section {
+                padding: 80px 20px;
+            }
+
+            .project-info {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .project-details {
+                border-left: none;
+                border-top: 1px solid #303640;
+                padding-left: 0;
+                padding-top: 30px;
+            }
+
+            .levels {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                letter-spacing: -3px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+        <a href="../index.html" class="logo">
+            PANDA
+        </a>
+
+        <a href="../index.html#projects" class="back-link">
+            ← Back to Projects
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <header class="hero">
+
+        <p class="eyebrow">
+            GAME DESIGN • LEVEL DESIGN • DIGIPEN BILBAO
+        </p>
+
+        <h1>
+            Mega Maker
+        </h1>
+
+        <p class="hero-description">
+            A level design project focused on creating original,
+            playable levels with intentional gameplay cadence,
+            thematic identity, and escalating difficulty.
+        </p>
+
+    </header>
+
+
+    <!-- =========================
+         PROJECT OVERVIEW
+    ========================= -->
+
+    <section>
+
+        <p class="section-label">
+            01 — OVERVIEW
+        </p>
+
+        <h2>
+            Designing levels<br>
+            from the ground up.
+        </h2>
+
+        <div class="project-info">
+
+            <div class="project-description">
+
+                <p>
+                    Mega Maker is a level editor that I used to design
+                    and build original playable levels from scratch.
+                </p>
+
+                <p>
+                    This was an individual project completed as part
+                    of my design module during my exchange at
+                    DigiPen Bilbao in Spain.
+                </p>
+
+                <p>
+                    I was responsible for the entire design process,
+                    including level layouts, gameplay flow, thematic
+                    direction, difficulty progression, and the
+                    placement of gameplay elements.
+                </p>
+
+                <p>
+                    Each level was designed with gameplay cadence in
+                    mind, balancing moments of challenge, movement,
+                    exploration, and recovery.
+                </p>
+
+            </div>
+
+
+            <div class="project-details">
+
+                <div class="detail">
+                    <p class="detail-title">Project Type</p>
+                    <p class="detail-value">Individual Project</p>
+                </div>
+
+                <div class="detail">
+                    <p class="detail-title">Role</p>
+                    <p class="detail-value">Level Designer</p>
+                </div>
+
+                <div class="detail">
+                    <p class="detail-title">Location</p>
+                    <p class="detail-value">DigiPen Bilbao, Spain</p>
+                </div>
+
+                <div class="detail">
+                    <p class="detail-title">Focus</p>
+                    <p class="detail-value">
+                        Level Design, Game Design,
+                        Gameplay Cadence
+                    </p>
+                </div>
+
+                <div class="detail">
+                    <p class="detail-title">Software</p>
+                    <p class="detail-value">
+                        Mega Maker
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         DESIGN SHOWCASE
+    ========================= -->
+
+    <section>
+
+        <p class="section-label">
+            02 — DESIGN
+        </p>
+
+        <h2>
+            Built around<br>
+            gameplay rhythm.
+        </h2>
+
+        <p style="max-width: 750px; font-size: 18px;">
+            The levels were designed around intentional gameplay
+            cadences, using changes in challenge and pacing to create
+            a structured player experience. I also developed distinct
+            themes and difficulty levels for each stage.
+        </p>
+
+
+        <div class="design-image">
+
+            <img src="../images/Group 3.png"
+                 alt="Mega Maker level design">
+
+            <p class="caption">
+                Level design and gameplay planning.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LEVEL SHOWCASE
+    ========================= -->
+
+    <section>
+
+        <p class="section-label">
+            03 — LEVEL SHOWCASE
+        </p>
+
+        <h2>
+            Three levels.<br>
+            Three experiences.
+        </h2>
+
+        <div class="levels">
+
+
+            <!-- EASY -->
+
+            <article class="level-card">
+
+                <iframe class="level-video"
+                        src="https://youtu.be/BfZPL78SmtY"
+                        title="Verdant Vines - Easy"
+                        frameborder="0"
+                        allowfullscreen>
+                </iframe>
+
+                <div class="level-content">
+
+                    <p class="level-number">
+                        01
+                    </p>
+
+                    <h3>
+                        Verdant Vines
+                    </h3>
+
+                    <p>
+                        An introductory level designed to establish
+                        the core gameplay mechanics while providing
+                        a more accessible experience.
+                    </p>
+
+                    <span class="difficulty">
+                        EASY
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- MEDIUM -->
+
+            <article class="level-card">
+
+                <iframe class="level-video"
+                        src="https://youtu.be/Sap5Nu8ROQY"
+                        title="Verdant Vines - Easy"
+                        frameborder="0"
+                        allowfullscreen>
+                </iframe>
+
+                <div class="level-content">
+
+                    <p class="level-number">
+                        02
+                    </p>
+
+                    <h3>
+                        Cosmic Cavern
+                    </h3>
+
+                    <p>
+                        A medium-difficulty level that increases
+                        complexity and requires players to apply
+                        mechanics introduced earlier.
+                    </p>
+
+                    <span class="difficulty">
+                        MEDIUM
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- HARD -->
+
+            <article class="level-card">
+
+                <iframe class="level-video"
+                        src="https://youtu.be/uOZmvs4XIBA"
+                        title="Verdant Vines - Easy"
+                        frameborder="0"
+                        allowfullscreen>
+                </iframe>
+
+                <div class="level-content">
+
+                    <p class="level-number">
+                        03
+                    </p>
+
+                    <h3>
+                        Molten Maze
+                    </h3>
+
+                    <p>
+                        A harder level designed around increased
+                        challenge, tighter gameplay sequences,
+                        and more demanding player decisions.
+                    </p>
+
+                    <span class="difficulty">
+                        HARD
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         DESIGN PROCESS
+    ========================= -->
+
+    <section>
+
+        <p class="section-label">
+            04 — DESIGN PROCESS
+        </p>
+
+        <h2>
+            From concept<br>
+            to playable level.
+        </h2>
+
+        <div class="process-grid">
+
+
+            <article class="process-card">
+
+                <p class="process-number">
+                    01
+                </p>
+
+                <h3>
+                    Concept
+                </h3>
+
+                <p>
+                    I started by defining the theme, intended
+                    difficulty, and overall gameplay experience
+                    for each level.
+                </p>
+
+            </article>
+
+
+            <article class="process-card">
+
+                <p class="process-number">
+                    02
+                </p>
+
+                <h3>
+                    Level Design
+                </h3>
+
+                <p>
+                    I created the layouts and gameplay sequences
+                    from scratch, considering player movement,
+                    challenge, pacing, and cadence.
+                </p>
+
+            </article>
+
+
+            <article class="process-card">
+
+                <p class="process-number">
+                    03
+                </p>
+
+                <h3>
+                    Refinement
+                </h3>
+
+                <p>
+                    I played through and refined the levels to
+                    improve their flow, difficulty, and overall
+                    player experience.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TAKEAWAYS
+    ========================= -->
+
+    <section>
+
+        <p class="section-label">
+            05 — TAKEAWAYS
+        </p>
+
+        <h2>
+            What I learned.
+        </h2>
+
+        <div class="takeaways">
+
+            <p>
+                This project gave me hands-on experience with
+                designing gameplay experiences from the perspective
+                of a level designer.
+            </p>
+
+            <p>
+                I learned how important pacing and gameplay cadence
+                are when structuring a level, and how difficulty can
+                be communicated through level design rather than
+                simply making individual obstacles harder.
+            </p>
+
+            <p>
+                More importantly, designing the levels entirely
+                myself allowed me to explore how creative decisions
+                and technical constraints work together to create
+                an enjoyable player experience.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Panda — Computer Science, Interactive Media & Game Development
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
