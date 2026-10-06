@@ -8,6 +8,20 @@
     <title>SoulBound | Bryan Lim</title>
 
     <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Faded hero background header styling */
+        .hero-banner {
+            position: relative;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('../images/soulbound-cover.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 80px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
 </head>
 
 <body>
@@ -24,11 +38,11 @@
     </nav>
 
 
-    <!-- Hero Header -->
-    <header class="hero">
+    <!-- Hero Header with Faded Cover Page Background -->
+    <header class="hero hero-banner">
 
         <p class="eyebrow">
-            GAME ENGINE DEVELOPMENT • AUDIO LEAD • C++
+            GAME ENGINE DEVELOPMENT • AUDIO LEAD / PROGRAMMER • C++
         </p>
 
         <h1>
@@ -63,7 +77,7 @@
                 </p>
 
                 <p>
-                    Before building the game, our team developed a full custom game engine in C++. As part of the development, I focused on custom editor tooling using Dear ImGui, robust 2D collision detection, custom audio implementation with proximity-based attenuation, and settings UI menus.
+                    Before building the game, our team developed a full custom game engine in C++. As part of the development, I focused on custom editor tooling using ImGui, robust 2D collision detection, custom audio implementation with proximity-based attenuation, and settings UI menus.
                 </p>
 
             </div>
@@ -71,13 +85,21 @@
             <div class="project-details">
 
                 <div class="detail">
+                    <p class="detail-title">Developer</p>
+                    <p class="detail-value">LIM Bryan Jun Jie</p>
+                </div>
+
+                <div class="detail">
                     <p class="detail-title">Team</p>
                     <p class="detail-value">Midnight Munchies</p>
                 </div>
 
                 <div class="detail">
-                    <p class="detail-title">Role</p>
-                    <p class="detail-value">Audio Lead & Engine Developer</p>
+                    <p class="detail-title">Roles</p>
+                    <p class="detail-value">
+                        Audio Lead / Programmer<br>
+                        Collision Champion / Audio Champion
+                    </p>
                 </div>
 
                 <div class="detail">
@@ -87,7 +109,7 @@
 
                 <div class="detail">
                     <p class="detail-title">Tech Stack</p>
-                    <p class="detail-value">C++, Dear ImGui, Custom Engine</p>
+                    <p class="detail-value">C++, ImGui, Custom Engine</p>
                 </div>
 
             </div>
@@ -106,11 +128,11 @@
 
         <h2>
             C++ Engine &<br>
-            Dear ImGui Tools.
+            ImGui Tools.
         </h2>
 
         <p style="max-width: 750px; font-size: 18px; margin-bottom: 30px;">
-            To power SoulBound, we engineered a custom C++ game engine from scratch. I was heavily involved in creating the editor tools using Dear ImGui, focusing on asset management workflows, prefab manipulation, and physics collisions.
+            To power SoulBound, we engineered a custom C++ game engine from scratch. As Collision Champion and Audio Champion, I was heavily involved in physics collision systems, dynamic audio architecture, and creating editor tools using ImGui.
         </p>
 
         <div class="process-grid">
@@ -119,7 +141,7 @@
                 <p class="process-number">01</p>
                 <h3>Assets & Directory Panel</h3>
                 <p>
-                    Designed the ImGui Assets Panel split into a directory listing (left) and interactive preview style (right). Supports navigating folder structures and dragging/dropping asset files (e.g. <code>.png</code>) directly from Windows Explorer.
+                    Designed the ImGui Assets Panel split into a directory listing (left) and interactive preview style (right). Supports navigating folder structures and dragging/dropping asset files directly from Windows Explorer.
                 </p>
             </article>
 
@@ -135,20 +157,20 @@
                 <p class="process-number">03</p>
                 <h3>Inspector & Collisions</h3>
                 <p>
-                    Built the object inspector panel for live modification of Transforms, Rigidbodies, Colliders, and Animators. Implemented collision checks to prevent entities from clipping or breaking game physics.
+                    Built the object inspector panel for live modification of Transforms, Rigidbodies, Colliders, and Animators. Implemented solid collision detection to prevent entities from clipping or breaking game physics.
                 </p>
             </article>
 
         </div>
 
         <div class="design-image">
-            <img src="../images/im gui.jpg" alt="Dear ImGui Custom Engine Editor Overview">
+            <img src="../images/imggui.jpg" alt="ImGui Custom Engine Editor Overview">
             <p class="caption">Full ImGui engine editor viewport with Scene hierarchy, Inspector, and Asset directory panels.</p>
         </div>
 
         <div class="levels" style="margin-top: 30px;">
             <div class="level-card">
-                <img src="../images/assets panel.png" alt="Assets Panel" style="width:100%; height:auto;">
+                <img src="../images/assets-panel.png" alt="Assets Panel" style="width:100%; height:auto;">
                 <div class="level-content">
                     <h3>Assets Directory Panel</h3>
                     <p>Displays full directory structure and preview icons for easy folder navigation.</p>
@@ -156,7 +178,7 @@
             </div>
 
             <div class="level-card">
-                <img src="../images/asset properties panel.png" alt="Asset Properties Panel" style="width:100%; height:auto;">
+                <img src="../images/asset-properties.png" alt="Asset Properties Panel" style="width:100%; height:auto;">
                 <div class="level-content">
                     <h3>Asset Properties Panel</h3>
                     <p>Shows asset metadata, prefab options, and component property overrides.</p>
@@ -164,7 +186,7 @@
             </div>
 
             <div class="level-card">
-                <img src="../images/image_6a645c.png" alt="Inspector Panel" style="width:100%; height:auto;">
+                <img src="../images/inspector.png" alt="Inspector Panel" style="width:100%; height:auto;">
                 <div class="level-content">
                     <h3>Object Inspector</h3>
                     <p>Live tweaks for Transform, Controller, Rigidbody, Colliders, and Animators.</p>
@@ -192,7 +214,7 @@
             <div class="project-description">
 
                 <p>
-                    As the <strong>Audio Lead</strong>, I implemented interactive SFX and dynamic sound systems across the entire game:
+                    As the <strong>Audio Lead & Audio Champion</strong>, I implemented interactive SFX and dynamic sound systems across the entire game:
                 </p>
 
                 <p>
@@ -205,7 +227,7 @@
 
             <div>
                 <div class="design-image" style="margin-top: 0;">
-                    <img src="../images/options menu.png" alt="Options and Settings Menu UI">
+                    <img src="../images/options-menu.png" alt="Options and Settings Menu UI">
                     <p class="caption">In-game Options menu controlling Audio, BGM, SFX volume, and Windowed mode.</p>
                 </div>
             </div>
@@ -251,7 +273,7 @@
             </article>
 
             <article class="process-card">
-                <h3>Snek (Monster 3)</h3>
+                <h3>Snek (Snake)</h3>
                 <p>
                     Slingshot movement. Aim direction with <strong>W/A/S/D</strong>, adjust launch power via the power panel, and press <strong>Spacebar</strong> to shoot forward.
                 </p>
