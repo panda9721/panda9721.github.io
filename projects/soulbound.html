@@ -9,17 +9,38 @@
 
     <link rel="stylesheet" href="../style.css">
     <style>
-        /* Faded hero background header styling */
-        .hero-banner {
-            position: relative;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('../images/soulbound-cover.jpg');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            padding: 80px 20px;
+        /* Two-column hero layout with offset cover image */
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .hero-cover-img {
+            width: 100%;
+            height: auto;
             border-radius: 12px;
-            margin-bottom: 40px;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            object-fit: cover;
+        }
+
+        /* Compact image styling to fit cards neatly */
+        .panel-img {
+            max-width: 240px;
+            width: 100%;
+            height: auto;
+            margin: 0 auto 15px auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -38,20 +59,26 @@
     </nav>
 
 
-    <!-- Hero Header with Faded Cover Page Background -->
-    <header class="hero hero-banner">
+    <!-- Hero Header with Offset Cover Image -->
+    <header class="hero hero-container">
 
-        <p class="eyebrow">
-            GAME ENGINE DEVELOPMENT • AUDIO LEAD / PROGRAMMER • C++
-        </p>
+        <div class="hero-text">
+            <p class="eyebrow">
+                GAME ENGINE DEVELOPMENT • AUDIO LEAD / PROGRAMMER • C++
+            </p>
 
-        <h1>
-            SoulBound
-        </h1>
+            <h1>
+                SoulBound
+            </h1>
 
-        <p class="hero-description">
-            A 2D platformer puzzle game built on a custom-built C++ game engine. Built as part of team Midnight Munchies for a school project.
-        </p>
+            <p class="hero-description">
+                A 2D platformer puzzle game built on a custom-built C++ game engine. Built as part of team Midnight Munchies for a school project.
+            </p>
+        </div>
+
+        <div class="hero-media">
+            <img src="../images/Group 3.png" alt="SoulBound Cover Art" class="hero-cover-img">
+        </div>
 
     </header>
 
@@ -164,13 +191,13 @@
         </div>
 
         <div class="design-image">
-            <img src="../images/imggui.jpg" alt="ImGui Custom Engine Editor Overview">
+            <img src="../images/imgui.jpg" alt="ImGui Custom Engine Editor Overview">
             <p class="caption">Full ImGui engine editor viewport with Scene hierarchy, Inspector, and Asset directory panels.</p>
         </div>
 
         <div class="levels" style="margin-top: 30px;">
             <div class="level-card">
-                <img src="../images/assets-panel.png" alt="Assets Panel" style="width:100%; height:auto;">
+                <img src="../images/assets-panel.png" alt="Assets Panel" class="panel-img">
                 <div class="level-content">
                     <h3>Assets Directory Panel</h3>
                     <p>Displays full directory structure and preview icons for easy folder navigation.</p>
@@ -178,7 +205,7 @@
             </div>
 
             <div class="level-card">
-                <img src="../images/asset-properties.png" alt="Asset Properties Panel" style="width:100%; height:auto;">
+                <img src="../images/asset-properties.png" alt="Asset Properties Panel" class="panel-img">
                 <div class="level-content">
                     <h3>Asset Properties Panel</h3>
                     <p>Shows asset metadata, prefab options, and component property overrides.</p>
@@ -186,7 +213,7 @@
             </div>
 
             <div class="level-card">
-                <img src="../images/inspector.png" alt="Inspector Panel" style="width:100%; height:auto;">
+                <img src="../images/inspector.png" alt="Inspector Panel" class="panel-img">
                 <div class="level-content">
                     <h3>Object Inspector</h3>
                     <p>Live tweaks for Transform, Controller, Rigidbody, Colliders, and Animators.</p>
