@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SoulBound | Bryan Lim</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="../index.html" class="logo">
+            Bryan Lim Jun Jie
+        </a>
+
+        <a href="../index.html#projects" class="back-link">
+            ← Back to Projects
+        </a>
+    </nav>
+
+
+    <!-- Hero Header -->
+    <header class="hero">
+
+        <p class="eyebrow">
+            GAME ENGINE DEVELOPMENT • AUDIO LEAD • C++
+        </p>
+
+        <h1>
+            SoulBound
+        </h1>
+
+        <p class="hero-description">
+            A 2D platformer puzzle game built on a custom-built C++ game engine. Built as part of team Midnight Munchies for a school project.
+        </p>
+
+    </header>
+
+
+    <!-- Overview -->
+    <section>
+
+        <p class="section-label">
+            01 — OVERVIEW
+        </p>
+
+        <h2>
+            Custom Engine &<br>
+            Possession Gameplay.
+        </h2>
+
+        <div class="project-info">
+
+            <div class="project-description">
+
+                <p>
+                    <strong>SoulBound</strong> is a 2D side-scrolling platform adventure game centered around a unique <em>Possession mechanic</em>. Players control Raincharm, who can possess various enemies and take on their distinct forms and abilities to overcome obstacles and solve puzzles.
+                </p>
+
+                <p>
+                    Before building the game, our team developed a full custom game engine in C++. As part of the development, I focused on custom editor tooling using Dear ImGui, robust 2D collision detection, custom audio implementation with proximity-based attenuation, and settings UI menus.
+                </p>
+
+            </div>
+
+            <div class="project-details">
+
+                <div class="detail">
+                    <p class="detail-title">Team</p>
+                    <p class="detail-value">Midnight Munchies</p>
+                </div>
+
+                <div class="detail">
+                    <p class="detail-title">Role</p>
+                    <p class="detail-value">Audio Lead & Engine Developer</p>
+                </div>
+
+                <div class="detail">
+                    <p class="detail-title">Genre</p>
+                    <p class="detail-value">2D Platformer Puzzle</p>
+                </div>
+
+                <div class="detail">
+                    <p class="detail-title">Tech Stack</p>
+                    <p class="detail-value">C++, Dear ImGui, Custom Engine</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Engine & Tooling -->
+    <section>
+
+        <p class="section-label">
+            02 — ENGINE & TOOLING
+        </p>
+
+        <h2>
+            C++ Engine &<br>
+            Dear ImGui Tools.
+        </h2>
+
+        <p style="max-width: 750px; font-size: 18px; margin-bottom: 30px;">
+            To power SoulBound, we engineered a custom C++ game engine from scratch. I was heavily involved in creating the editor tools using Dear ImGui, focusing on asset management workflows, prefab manipulation, and physics collisions.
+        </p>
+
+        <div class="process-grid">
+
+            <article class="process-card">
+                <p class="process-number">01</p>
+                <h3>Assets & Directory Panel</h3>
+                <p>
+                    Designed the ImGui Assets Panel split into a directory listing (left) and interactive preview style (right). Supports navigating folder structures and dragging/dropping asset files (e.g. <code>.png</code>) directly from Windows Explorer.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <p class="process-number">02</p>
+                <h3>Asset Properties & Prefabs</h3>
+                <p>
+                    Double-clicking items displays metadata (Name, Type, Path, Size) and component controls. Allows developers to modify properties, preview JSON data, save changes back as prefabs, or delete assets.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <p class="process-number">03</p>
+                <h3>Inspector & Collisions</h3>
+                <p>
+                    Built the object inspector panel for live modification of Transforms, Rigidbodies, Colliders, and Animators. Implemented collision checks to prevent entities from clipping or breaking game physics.
+                </p>
+            </article>
+
+        </div>
+
+        <div class="design-image">
+            <img src="../images/im gui.jpg" alt="Dear ImGui Custom Engine Editor Overview">
+            <p class="caption">Full ImGui engine editor viewport with Scene hierarchy, Inspector, and Asset directory panels.</p>
+        </div>
+
+        <div class="levels" style="margin-top: 30px;">
+            <div class="level-card">
+                <img src="../images/assets panel.png" alt="Assets Panel" style="width:100%; height:auto;">
+                <div class="level-content">
+                    <h3>Assets Directory Panel</h3>
+                    <p>Displays full directory structure and preview icons for easy folder navigation.</p>
+                </div>
+            </div>
+
+            <div class="level-card">
+                <img src="../images/asset properties panel.png" alt="Asset Properties Panel" style="width:100%; height:auto;">
+                <div class="level-content">
+                    <h3>Asset Properties Panel</h3>
+                    <p>Shows asset metadata, prefab options, and component property overrides.</p>
+                </div>
+            </div>
+
+            <div class="level-card">
+                <img src="../images/image_6a645c.png" alt="Inspector Panel" style="width:100%; height:auto;">
+                <div class="level-content">
+                    <h3>Object Inspector</h3>
+                    <p>Live tweaks for Transform, Controller, Rigidbody, Colliders, and Animators.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Audio & UI Systems -->
+    <section>
+
+        <p class="section-label">
+            03 — AUDIO & SYSTEMS
+        </p>
+
+        <h2>
+            Dynamic Audio &<br>
+            Settings State Control.
+        </h2>
+
+        <div class="project-info">
+
+            <div class="project-description">
+
+                <p>
+                    As the <strong>Audio Lead</strong>, I implemented interactive SFX and dynamic sound systems across the entire game:
+                </p>
+
+                <p>
+                    • <strong>Proximity Audio:</strong> Dynamically adjusts volume based on player distance when approaching environmental hazards like spikes or falling platforms.<br>
+                    • <strong>Character Soundsets:</strong> Created distinct audio cues and interaction responses for Raincharm (Ghost), Demonic Frog, Flyeye, and Snek (Snake).<br>
+                    • <strong>Settings & Options Menu:</strong> Programmed state management for level progression (Levels 1, 2, 3) alongside master/BGM/SFX audio volume controls and window display modes.
+                </p>
+
+            </div>
+
+            <div>
+                <div class="design-image" style="margin-top: 0;">
+                    <img src="../images/options menu.png" alt="Options and Settings Menu UI">
+                    <p class="caption">In-game Options menu controlling Audio, BGM, SFX volume, and Windowed mode.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Gameplay & Mechanics Guide -->
+    <section>
+
+        <p class="section-label">
+            04 — GAMEPLAY & MECHANICS
+        </p>
+
+        <h2>
+            Possession &<br>
+            Character Abilities.
+        </h2>
+
+        <div class="process-grid">
+
+            <article class="process-card">
+                <h3>Raincharm (Spirit)</h3>
+                <p>
+                    Press <strong>Double Spacebar</strong> to glide through the air after jumping off platforms.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <h3>Demonic Frog</h3>
+                <p>
+                    Jumps higher than Raincharm. Uses a grapple hook (auto-aims stickable walls). Hold <strong>Spacebar</strong> to attach and swing with <strong>W/S</strong>.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <h3>Flyeye</h3>
+                <p>
+                    Passive double jump. Landing on essence restores jumps. Must consume the passive double jump before essence effect takes place.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <h3>Snek (Monster 3)</h3>
+                <p>
+                    Slingshot movement. Aim direction with <strong>W/A/S/D</strong>, adjust launch power via the power panel, and press <strong>Spacebar</strong> to shoot forward.
+                </p>
+            </article>
+
+        </div>
+
+
+        <!-- Controls & Cheats -->
+        <div class="project-info" style="margin-top: 40px;">
+
+            <div class="project-details" style="width: 100%;">
+                <p class="detail-title">Game Controls (PC Keyboard)</p>
+                <p class="detail-value">
+                    • <strong>Move:</strong> A / D Keys | <strong>Up/Down:</strong> W / S Keys<br>
+                    • <strong>Jump / Ability:</strong> Spacebar / Double Spacebar<br>
+                    • <strong>Possess / Unpossess:</strong> J Key
+                </p>
+            </div>
+
+            <div class="project-details" style="width: 100%;">
+                <p class="detail-title">Developer Cheat Codes</p>
+                <p class="detail-value">
+                    Hold <code>` + Ctrl</code> along with:<br>
+                    • <strong>Possessions:</strong> [1] Frog, [2] Flyeye, [3] Snek<br>
+                    • <strong>Level Skip:</strong> [0] Tutorial, [9] Level 1, [8] Level 2, [7] Level 3
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Video Showcase -->
+    <section>
+
+        <p class="section-label">
+            05 — SHOWCASE
+        </p>
+
+        <h2>
+            Gameplay Videos.
+        </h2>
+
+        <div class="levels">
+
+            <article class="level-card">
+                <iframe class="level-video"
+                        src="https://www.youtube.com/embed/psjMKbx5KxQ"
+                        title="SoulBound Gameplay Showcase"
+                        frameborder="0"
+                        allowfullscreen>
+                </iframe>
+                <div class="level-content">
+                    <h3>Gameplay Showcase</h3>
+                    <p>Highlighting core mechanics, possession transitions, and level puzzles.</p>
+                </div>
+            </article>
+
+            <article class="level-card">
+                <iframe class="level-video"
+                        src="https://www.youtube.com/embed/TNQO84ugYA0"
+                        title="SoulBound Full Gameplay Walkthrough"
+                        frameborder="0"
+                        allowfullscreen>
+                </iframe>
+                <div class="level-content">
+                    <h3>Full Playthrough</h3>
+                    <p>Complete playthrough demonstrating level progression and audio cues.</p>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 Bryan Lim Jun Jie — Computer Science, Interactive Media & Game Development
+        </p>
+    </footer>
+
+</body>
+
+</html>
