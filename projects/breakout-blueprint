@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Breakout Blueprint | Bryan Lim</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .hero-cover-img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            object-fit: cover;
+        }
+
+        .showcase-img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="../index.html" class="logo">
+            Bryan Lim Jun Jie
+        </a>
+
+        <a href="../index.html#projects" class="back-link">
+            ← Back to Projects
+        </a>
+    </nav>
+
+
+    <!-- Hero Header -->
+    <header class="hero hero-container">
+
+        <div class="hero-text">
+            <p class="eyebrow">
+                TABLETOP GAME DESIGN • SYSTEMS & MECHANICS • UI LAYOUT
+            </p>
+
+            <h1>
+                Breakout Blueprint
+            </h1>
+
+            <p class="hero-description">
+                A cooperative/solo tabletop card game where players work to execute an escape plan from prison before alertness peaks or resources run dry.
+            </p>
+        </div>
+
+        <div class="hero-media">
+            <img src="../images/image_b9dab9.jpg" alt="Breakout Blueprint Card Set Overview" class="hero-cover-img">
+        </div>
+
+    </header>
+
+
+    <!-- Overview -->
+    <section>
+
+        <p class="section-label">
+            01 — OVERVIEW
+        </p>
+
+        <h2>
+            Tactical Prison Escape &<br>
+            Card Mechanics.
+        </h2>
+
+        <div class="project-info">
+
+            <div class="project-description">
+
+                <p>
+                    <strong>Breakout Blueprint</strong> is a strategic tabletop card game developed as part of a school team project. Players take on the role of inmates attempting to complete 3 Plan Cards to escape prison before reaching 10 Alertness or depleting the draw deck.
+                </p>
+
+                <p>
+                    Working in a team of 4, I was responsible for the **card layout design**, **cardback artwork**, **DLC expansion card designs**, and designing the mechanics for the **10 core Ability Cards**.
+                </p>
+
+            </div>
+
+            <div class="project-details">
+
+                <div class="detail">
+                    <p class="detail-title">Developer</p>
+                    <p class="detail-value">LIM Bryan Jun Jie</p>
+                </div>
+
+                <div class="detail">
+                    <p class="detail-title">Team Size</p>
+                    <p class="detail-value">Team of 4 (School Project)</p>
+                </div>
+
+                <div class="detail">
+                    <p class="detail-title">My Role</p>
+                    <p class="detail-value">Card Layout & Cardback Designer, Ability Mechanics Designer, Expansion Card Designer</p>
+                </div>
+
+                <div class="detail">
+                    <p class="detail-title">Format</p>
+                    <p class="detail-value">Tabletop Card Game (40 Cards + Tokens)</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Design & Contributions -->
+    <section>
+
+        <p class="section-label">
+            02 — DESIGN & CONTRIBUTIONS
+        </p>
+
+        <h2>
+            Visual Layouts &<br>
+            Ability Card Design.
+        </h2>
+
+        <div class="process-grid">
+
+            <article class="process-card">
+                <p class="process-number">01</p>
+                <h3>Card Layout & Cardback</h3>
+                <p>
+                    Designed clear, functional card layouts with dedicated headers, damage/cost badges, iconography, and distinct color coding for quick readability during gameplay. Created a custom blueprint-style cardback art.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <p class="process-number">02</p>
+                <h3>10 Ability Mechanics</h3>
+                <p>
+                    Designed the mechanics for all 10 Ability Cards (e.g., Silent Movement, Adrenaline Surge, Scavenger's Luck, Quick Fix) to give players strategic flexibility for managing alertness and drawing critical tools.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <p class="process-number">03</p>
+                <h3>DLC Expansion Cards</h3>
+                <p>
+                    Expanded game depth by designing additional DLC content cards, including unique mechanics like Wire Cutters (stunning enemies), Fake Alarms (shuffling enemies), and Warden's Hound obstacles.
+                </p>
+            </article>
+
+        </div>
+
+        <div class="design-image">
+            <img src="../images/image_b9881d.png" alt="Breakout Blueprint DLC Expansion Cards Preview" class="showcase-img">
+            <p class="caption">DLC Expansion Cards showcasing custom card design, icon badges, and blueprint cardbacks.</p>
+        </div>
+
+    </section>
+
+
+    <!-- Game Rules & Structure -->
+    <section>
+
+        <p class="section-label">
+            03 — GAME SYSTEM & RULES
+        </p>
+
+        <h2>
+            Rule Engine &<br>
+            Win/Loss Conditions.
+        </h2>
+
+        <div class="process-grid">
+
+            <article class="process-card">
+                <h3>Card Types (40 Total)</h3>
+                <p>
+                    • <strong>20 Tool Cards:</strong> Deal damage to enemies or complete plans.<br>
+                    • <strong>10 Ability Cards:</strong> Temporary effects and utility.<br>
+                    • <strong>5 Plan Cards:</strong> Escape requirements.<br>
+                    • <strong>5 Enemy Cards:</strong> Obstacles raising alertness.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <h3>Turn Flow</h3>
+                <p>
+                    1. <strong>Draw Phase:</strong> Draw 4 cards, keep 3, shuffle 1 back.<br>
+                    2. <strong>Play Phase:</strong> Take up to 3 actions (play cards/tools).<br>
+                    3. <strong>Resolution Phase:</strong> Check defeated enemies & completed plans.<br>
+                    4. <strong>Enemy Phase:</strong> Active enemies attack & trigger effects.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <h3>Victory Condition</h3>
+                <p>
+                    Successfully attach the required Tool Cards to complete <strong>3 Plan Cards</strong> to escape the prison.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <h3>Loss Conditions</h3>
+                <p>
+                    • Reach <strong>10 Alertness Tokens</strong>.<br>
+                    • Run out of cards in the <strong>Draw Deck</strong> during Resolution.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- Gameplay Components -->
+    <section>
+
+        <p class="section-label">
+            04 — COMPONENTS
+        </p>
+
+        <h2>
+            Game Board Overview.
+        </h2>
+
+        <div class="design-image">
+            <img src="../images/image_b9dab9.jpg" alt="Full Game Components Layout" class="showcase-img">
+            <p class="caption">Complete deck layout featuring Enemy, Plan, and Ability cards alongside Alertness and Spawn counter tokens.</p>
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 Bryan Lim Jun Jie — Computer Science, Interactive Media & Game Development
+        </p>
+    </footer>
+
+</body>
+
+</html>
