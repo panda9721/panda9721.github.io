@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Genesis | Bryan Lim</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .hero-cover-img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            object-fit: cover;
+        }
+
+        .showcase-img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="../index.html" class="logo">
+            Bryan Lim Jun Jie
+        </a>
+
+        <a href="../index.html#projects" class="back-link">
+            ← Back to Projects
+        </a>
+    </nav>
+
+
+    <!-- Hero Header -->
+    <header class="hero hero-container">
+
+        <div class="hero-text">
+            <p class="eyebrow">
+                WEB DEVELOPMENT • FRONTEND LEAD • AUDIO INTEGRATION
+            </p>
+
+            <h1>
+                Genesis
+            </h1>
+
+            <p class="hero-description">
+                A mobile-friendly web application that turns photos of real-world objects into 3D models. Built by team CoDe-Fine as a 7-person school project.
+            </p>
+        </div>
+
+        <!-- TODO: uncomment once the cover screenshot is in /images
+        <div class="hero-media">
+            <img src="../images/genesis-cover.png" alt="Genesis website home page" class="hero-cover-img">
+        </div>
+        -->
+
+    </header>
+
+
+    <!-- Overview -->
+    <section>
+
+        <p class="section-label">
+            01 — OVERVIEW
+        </p>
+
+        <h2>
+            Photos to 3D &<br>
+            Web Frontend.
+        </h2>
+
+        <div class="project-info">
+
+            <div class="project-description">
+
+                <p>
+                    <strong>Genesis</strong> is an all-in-one tool for independent creators to generate 3D models of real objects. Users can scan an object with their device camera, upload their own photos, or pull frames from a YouTube video. The images are then processed through a COLMAP and Gaussian Splatting pipeline to create a 3D model.
+                </p>
+
+                <p>
+                    As <strong>Frontend Lead</strong>, I built the website that users interact with, from the first HTML and CSS mock-up to the final redesigned site linked to the Node.js backend. I was also in charge of integrating audio feedback across the interface to improve the user experience.
+                </p>
+
+            </div>
+
+            <div class="project-details">
+
+                <div class="detail">
+                    <p class="detail-title">Developer</p>
+                    <p class="detail-value">Bryan Lim Jun Jie</p>
+                </div>
+
+                <div class="detail">
+                    <p class="detail-title">Team</p>
+                    <p class="detail-value">CoDe-Fine (Team of 7, School Project)</p>
+                </div>
+
+                <div class="detail">
+                    <p class="detail-title">My Role</p>
+                    <p class="detail-value">Frontend Lead, Audio Integration</p>
+                </div>
+
+                <div class="detail">
+                    <p class="detail-title">Tech Stack</p>
+                    <p class="detail-value">React, JavaScript, HTML, CSS, Node.js</p>
+                </div>
+
+                <div class="detail">
+                    <p class="detail-title">Status</p>
+                    <p class="detail-value">In Development</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Frontend Features -->
+    <section>
+
+        <p class="section-label">
+            02 — FRONTEND FEATURES
+        </p>
+
+        <h2>
+            Pages &<br>
+            Features I Built.
+        </h2>
+
+        <div class="process-grid">
+
+            <article class="process-card">
+                <p class="process-number">01</p>
+                <h3>Camera Capture</h3>
+                <p>
+                    Built the camera feature that opens the device's camera to photograph objects, including automated snapping. Fixed a bug where the camera stayed on after leaving the page, and later redesigned the Camera Capture page.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <p class="process-number">02</p>
+                <h3>Drag & Drop Upload</h3>
+                <p>
+                    Added a drag-and-drop feature so users can upload photos from their device straight into the website for model generation.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <p class="process-number">03</p>
+                <h3>YouTube Extractor</h3>
+                <p>
+                    Designed and implemented the YouTube Extractor page, where users paste a video link to pull frames that can be used to generate models.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <p class="process-number">04</p>
+                <h3>Media Library</h3>
+                <p>
+                    Linked the Library tab with the image gallery tab, and made the library display live data from the backend instead of mock images.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <p class="process-number">05</p>
+                <h3>Login & Account Pages</h3>
+                <p>
+                    Added the Login and Account pages so users can sign in and manage their own projects and models.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <p class="process-number">06</p>
+                <h3>Mobile Design</h3>
+                <p>
+                    Adapted the layout for mobile, since scanning objects with a phone camera is one of the main ways people use Genesis.
+                </p>
+            </article>
+
+        </div>
+
+        <!-- TODO: uncomment once screenshots are in /images
+        <div class="design-image">
+            <img src="../images/genesis-camera.png" alt="Genesis Camera Capture page" class="showcase-img">
+            <p class="caption">Redesigned Camera Capture page.</p>
+        </div>
+
+        <div class="design-image">
+            <img src="../images/genesis-library.png" alt="Genesis Media Library page" class="showcase-img">
+            <p class="caption">Media Library showing live data from the backend.</p>
+        </div>
+
+        <div class="design-image">
+            <img src="../images/genesis-youtube.png" alt="Genesis YouTube Extractor page" class="showcase-img">
+            <p class="caption">YouTube Extractor page for pulling frames from a video.</p>
+        </div>
+        -->
+
+    </section>
+
+
+    <!-- Audio & UX -->
+    <section>
+
+        <p class="section-label">
+            03 — AUDIO & USER EXPERIENCE
+        </p>
+
+        <h2>
+            Subtle Audio<br>
+            Feedback.
+        </h2>
+
+        <div class="project-description" style="max-width: 750px;">
+
+            <p>
+                The team wanted gentle, subtle sound effects that tell users their actions worked without getting in the way. I handled the frontend audio integration:
+            </p>
+
+            <p>
+                • <strong>Audio.js Module:</strong> Created a shared audio file so new sounds can be added to the website easily in the future.<br>
+                • <strong>Button Sound Categories:</strong> Gave each category of button its own sound, so users can tell different actions apart by ear.<br>
+                • <strong>Basic Frontend Audio:</strong> Set up the first round of UI sounds across the website as part of the M1 milestone.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Development Process -->
+    <section>
+
+        <p class="section-label">
+            04 — DEVELOPMENT PROCESS
+        </p>
+
+        <h2>
+            From Mock-up<br>
+            to Live Website.
+        </h2>
+
+        <div class="process-grid">
+
+            <article class="process-card">
+                <p class="process-number">01</p>
+                <h3>Mock-up</h3>
+                <p>
+                    Created the first mock website in HTML and CSS so the team could see the layout of the core features early.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <p class="process-number">02</p>
+                <h3>Connect</h3>
+                <p>
+                    Linked the website with the Node.js backend so pages could send uploads and show real data.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <p class="process-number">03</p>
+                <h3>Redesign</h3>
+                <p>
+                    Rebuilt the website to match the team's final design, then documented the project on the repository's GitHub Wiki.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 Bryan Lim Jun Jie — Computer Science, Interactive Media & Game Development
+        </p>
+    </footer>
+
+</body>
+
+</html>
